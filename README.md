@@ -12,6 +12,8 @@ iOS Developer @ [Metide Srl](https://www.metide.com)
 
 ## Guzzi Tracker
 
+![](Images/gt1.png) ![](Images/gt2.png) ![](Images/gt3.png) ![](Images/gt4.png)
+
 Tecnologies: `Swift`, `UIKit`, `Carthage`, `Kingfisher`, `MVC`, `Codable`, `Measurement`, `Localization`
 
 Guzzi Tracker was my first app developed from scratch. It's a reference guide of all the technical specs of (almost) all the motorcycles manufactured by Moto Guzzi since 1921. The app was available on the App Store from september 2018 to december 2019.
