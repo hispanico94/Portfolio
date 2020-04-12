@@ -1,5 +1,5 @@
 # Paolo Rocca
-
+![](Images/github_profile_pic.jpg)
 ### iOS Developer
 
 [![](https://img.shields.io/badge/GitHub-hispanico94-lightgrey)](https://github.com/hispanico94) [![](https://img.shields.io/badge/LinkedIn-Paolo%20Rocca-blue)](https://www.linkedin.com/in/paolo-rocca-ab4617171/) [![](https://img.shields.io/badge/Twitter-hispanico94-9cf)](https://twitter.com/hispanico94)
