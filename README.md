@@ -14,7 +14,7 @@ iOS Developer @ [Metide Srl](https://www.metide.com)
 
 ![](Images/gt1.png) ![](Images/gt2.png) ![](Images/gt3.png) ![](Images/gt4.png)
 
-Tecnologies: `Swift`, `UIKit`, `Carthage`, `Kingfisher`, `MVC`, `Codable`, `Measurement`, `Localization`
+Tecnologies: `Swift`, `UIKit`, `Carthage`, `Kingfisher`, `MVC`, `Codable`, `Measurement`, `Auto Layout`, `Localization`
 
 Guzzi Tracker was my first app developed from scratch. It's a reference guide of all the technical specs of (almost) all the motorcycles manufactured by Moto Guzzi since 1921. I developed the app between 2017 and 2018 and it was available on the App Store from september 2018 to december 2019.
 
@@ -28,7 +28,7 @@ The project is available on the [Guzzi Tracker repo](https://github.com/hispanic
 
 ![](Images/passit1.png) ![](Images/passit2.png) ![](Images/passit3.png) ![](Images/passit4.png)
 
-Tecnologies: `Swift`, `UIKit`, `Carthage`, `MVVM`, `RxSwift/RxCocoa`, `RxDataSources`, `CoreLocation`, `MapKit`
+Tecnologies: `Swift`, `UIKit`, `Carthage`, `MVVM`, `RxSwift/RxCocoa`, `RxDataSources`, `CoreLocation`, `MapKit`, `Auto Layout`
 
 PassIT is a toy project I developed between fall 2018 and winter 2019 while I was studying reactive programming using RxSwift and MVVM architecture. The app lists and shows on a map 438 road passes and road to mountain peaks in Italy. I took inspiration from my passion about motorcycles, just like Guzzi Tracker! For every pass o road peak some informations are reported, including name, address, elevation and distance and travel time from the user position calculated using `MKDirections`.
 
@@ -37,3 +37,17 @@ The app it's entirely written in Swift (updated to version 5) using a mix of MVC
 I really enjoyed studying reactive programming, RxSwift and MVVM and playing with them by creating this toy project. Now MVVM using RxSwift is my default way to go when working on real projects at my current company.
 
 This project is available on the [PassIT repo](https://github.com/hispanico94/PassIT).
+
+## Air Monitor (WIP)
+
+![](Images/am1.png) ![](Images/am2.png) ![](Images/am3.png) ![](Images/am4.png)
+
+Tecnologies: `Swift`, `SwiftUI`, `UIKit`, `Combine`, `URLSession`, `MVVM`
+
+Air Monitor is a toy project I'm currently working on (so it's WIP on the develop branch). I started developing this app for studying SwiftUI and Combine. The app shows the air quality data collected by the [OpenAQ Organization](https://openaq.org/) and calculates the air quality index based on the [EAQI specifications](https://airindex.eea.europa.eu/). The app shows the most recent measurements of pollutants like **PM10**, **PM2,5**, **SO2**, **NO2** and **O3** and also shows the trends of the last 30 days of the same pollutants. The actual pollutants and trends showed depends on the data available on the OpenAQ database. The colors showed represent the EAQI index level for every measuerment and pollutant.
+
+The app fetches the data from the [OpenAQ public APIs](https://docs.openaq.org) using `URLSession.DataTaskPublisher`. Then the data is processed for calculating the latest EAQI index based on the available data and it's shown in SwiftUI's `View`s. The `UIActivityIndicator` (and previously the `UISearchBar` also) is integrated in all views thanks to the `UIViewRepresentable` protocol for wrapping UIKit elements into SwiftUI views. The architecture used is MVVM, which goes very nicely with SwiftUI. At the moment no external libraries are used.
+
+I'm still working on this app and I'm currently interested on improving the architecture, maybe by implementing a *Finite State Machine* for representing the view state, or by implementing some kind of *Unidirectional Data Flow*. Also in the future I would like to show the data in a map view and I would like to make the views prettier: with SwiftUI is easier than with UIKit!
+
+This project is available on the [Air Monitor repo](https://github.com/hispanico94/Air-Monitor).
