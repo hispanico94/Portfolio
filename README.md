@@ -22,7 +22,7 @@ The app it's entirely written in Swift (updated to version 5) using MVC architec
 
 I'm very proud of Guzzi Tracker, being my first real app, developed with no working experience and published on the App Store.
 
-The project is available on the [Guzzi Tracker repo](https://github.com/hispanico94/Guzzi-Tracker).
+The project is available on the [Guzzi Tracker repo](https://github.com/hispanico94/Guzzi-Tracker). A detailed README of the project is also available.
 
 ## PassIT
 
