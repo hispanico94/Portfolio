@@ -42,7 +42,7 @@ This project is available on the [PassIT repo](https://github.com/hispanico94/Pa
 
 ![](Images/am1.png) ![](Images/am2.png) ![](Images/am3.png) ![](Images/am4.png)
 
-Tecnologies: `Swift`, `SwiftUI`, `UIKit`, `Combine`, `URLSession`, `MVVM`
+Tecnologies: `Swift`, `SwiftUI`, `UIKit`, `Combine`, `URLSession`, `The Composable Architecture`
 
 Air Monitor is a toy project I'm currently working on (so it's WIP on the develop branch). I recently started developing this app for studying SwiftUI and Combine. The app shows the air quality data collected by the [OpenAQ Organization](https://openaq.org/) and calculates the air quality index based on the [EAQI specifications](https://airindex.eea.europa.eu/). The app shows the most recent measurements of pollutants like **PM10**, **PM2,5**, **SO2**, **NO2** and **O3** and also shows the trends of the last 30 days of the same pollutants. The actual pollutants and trends showed depends on the data available on the OpenAQ database. The colors showed represent the EAQI index level for every measuerment and pollutant.
 
