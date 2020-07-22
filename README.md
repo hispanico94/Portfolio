@@ -14,6 +14,8 @@ iOS Developer @ [Metide Srl](https://www.metide.com)
 
 ![](Images/gt1.png) ![](Images/gt2.png) ![](Images/gt3.png) ![](Images/gt4.png)
 
+Year: 2017 - 2019
+
 Tecnologies: `Swift`, `UIKit`, `Carthage`, `Kingfisher`, `MVC`, `Codable`, `Measurement`, `Auto Layout`, `Localization`
 
 Guzzi Tracker was my first app developed from scratch. It's a reference guide of all the technical specs of (almost) all the motorcycles manufactured by Moto Guzzi since 1921. I developed the app between 2017 and 2018 and it was available on the App Store from september 2018 to december 2019.
@@ -27,6 +29,8 @@ The project is available on the [Guzzi Tracker repo](https://github.com/hispanic
 ## PassIT
 
 ![](Images/passit1.png) ![](Images/passit2.png) ![](Images/passit3.png) ![](Images/passit4.png)
+
+Year: 2018 - 2019
 
 Tecnologies: `Swift`, `UIKit`, `Carthage`, `MVVM`, `RxSwift/RxCocoa`, `RxDataSources`, `CoreLocation`, `MapKit`, `Auto Layout`
 
@@ -42,9 +46,11 @@ This project is available on the [PassIT repo](https://github.com/hispanico94/Pa
 
 ![](Images/am1.png) ![](Images/am2.png) ![](Images/am3.png) ![](Images/am4.png)
 
+Year: 2020
+
 Tecnologies: `Swift`, `SwiftUI`, `UIKit`, `Combine`, `URLSession`, `The Composable Architecture`
 
-Air Monitor is a toy project I'm currently working on (so it's WIP on the develop branch). I recently started developing this app for studying SwiftUI and Combine. The app shows the air quality data collected by the [OpenAQ Organization](https://openaq.org/) and calculates the air quality index based on the [EAQI specifications](https://airindex.eea.europa.eu/). The app shows the most recent measurements of pollutants like **PM10**, **PM2,5**, **SO2**, **NO2** and **O3** and also shows the trends of the last 30 days of the same pollutants. The actual pollutants and trends showed depends on the data available on the OpenAQ database. The colors showed represent the EAQI index level for every measuerment and pollutant.
+Air Monitor is my latest toy project. I started developing this app for studying SwiftUI and Combine. The app shows the air quality data collected in many locations around the world by the [OpenAQ Organization](https://openaq.org/) and calculates the air quality index based on the [EAQI specifications](https://airindex.eea.europa.eu/). The app shows the most recent measurements of pollutants like **PM10**, **PM2,5**, **SO2**, **NO2** and **O3** and also shows the trends of the last 30 days of the same pollutants. The actual pollutants and trends showed depends on the data available on the OpenAQ database. If no data from the last 30 days is available for the selected location an alert will be presented to the user. The colors showed represent the EAQI index level for every measuerment and pollutant.
 
 The app fetches the data from the [OpenAQ public APIs](https://docs.openaq.org) using `URLSession.DataTaskPublisher`. Then the data is processed for calculating the latest EAQI index based on the available data and it's shown in SwiftUI's `View`s. The `UIActivityIndicator` (and previously the `UISearchBar` also) is integrated in all views thanks to the `UIViewRepresentable` protocol for wrapping UIKit elements into SwiftUI views. The architecture used is [The Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture) by Brandon Williams and Stephen Celis at [Point-Free](https://www.pointfree.co). This is a very opinionated but great architecture with composition, modularity and testing in mind and it was specifically made for working with SwiftUI (although it's perfectly usable also on UIKit projects). It was very fun replacing the previous architecture I used for developing the app (MVVM) with TCA, I suggest everyone to give it a try!
 
