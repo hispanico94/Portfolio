@@ -55,3 +55,23 @@ Air Monitor is my latest toy project. I started developing this app for studying
 The app fetches the data from the [OpenAQ public APIs](https://docs.openaq.org) using `URLSession.DataTaskPublisher`. Then the data is processed for calculating the latest EAQI index based on the available data and it's shown in SwiftUI's `View`s. The `UIActivityIndicator` (and previously the `UISearchBar` also) is integrated in all views thanks to the `UIViewRepresentable` protocol for wrapping UIKit elements into SwiftUI views. The architecture used is [The Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture) by Brandon Williams and Stephen Celis at [Point-Free](https://www.pointfree.co). This is a very opinionated but great architecture with composition, modularity and testing in mind and it was specifically made for working with SwiftUI (although it's perfectly usable also on UIKit projects). It was very fun replacing the previous architecture I used for developing the app (MVVM) with TCA, I suggest everyone to give it a try!
 
 This project is available on the [Air Monitor repo](https://github.com/hispanico94/Air-Monitor).
+
+## SimplyAuth
+
+![](Images/sa1.png) ![](Images/sa2.png) ![](Images/sa3.png) ![](Images/sa4.png)
+
+Year: 2020 - 2021
+
+Tecnologies: `Swift`, `SwiftUI`, `UIKit`, `CryptoKit`, `Security (Keychain)`, `AVFoundation`, `The Composable Architecture`
+
+I started developing SimplyAuth for keeping practicing with SwiftUI and looking into `CryptoKit`, the cryptography framework release by Apple with iOS 13. This app handles the storage and generation of time-based and counter-based **One Time Password**s (**TOTP** and **HOTP**), like the [Google Authenticator app](https://apps.apple.com/it/app/google-authenticator/id388497605). 
+
+With CryptoKit developing a library for handling HOTP and TOTP is fairly easy. I started by studying the IETF's [RFC 4226](https://tools.ietf.org/html/rfc4226) and [RFC 6238](https://tools.ietf.org/html/rfc6238) documents. I later then defined what a [Password](https://github.com/hispanico94/SimplyAuth/blob/master/SimplyAuth/SimplyAuth/Models/Password.swift) is and then I defined a [couple of functions](https://github.com/hispanico94/SimplyAuth/blob/master/SimplyAuth/SimplyAuth/OTP/OTPExtractor.swift) that can extract a TOTP or HOTP based on the password and the current timestamp or counter associated with the password.
+The passwords are safely stored in the Keychain via the `Security` framework, no third party library was used. A [single entity](https://github.com/hispanico94/SimplyAuth/blob/master/SimplyAuth/SimplyAuth/Keychain/Keychain.swift) manages the saving, retrieving and deleting of passwords, and the passwords are stored as JSON data.
+
+The OTP can be added manually, by entering the required data (including advanced options like the algorithm, digits and start counter for HOTP or time interval for TOTP, although standard defaults are provided), or by scanning a QR code. The scanning is provided by AVFoundation and bridged to SwiftUI thanks to the `UIViewControllerRepresentable` protocol, no external libraries are used. The parsing of the underlying URL is done according to Google's [Key URI Format](https://github.com/google/google-authenticator/wiki/Key-Uri-Format) specifications.
+Users can reorder OTPs on the home view, they can also edit or delete OTPs by long-tapping on a OTP thanks to the context menu. By single tapping on a OTP the user can copy the current OTP on the clipboard. On certain interactions an haptic feedback is provided thanks to UIKit's `UIFeedbackGenerator` class.
+
+Like Air Monitor, the architecture used for SimplyAuth is [The Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture) by Brandon Williams and Stephen Celis at [Point-Free](https://www.pointfree.co). This is the only third party dependency used in the project and it's added via Swift Package Manager.
+
+This project is available on the [SimplyAuth repo](https://github.com/hispanico94/SimplyAuth).
