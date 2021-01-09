@@ -58,7 +58,7 @@ This project is available on the [Air Monitor repo](https://github.com/hispanico
 
 ## SimplyAuth
 
-![](Images/sa1.png) ![](Images/sa2.png) ![](Images/sa3.png) ![](Images/sa4.png)
+![](Images/sa1.jpeg) ![](Images/sa2.jpeg) ![](Images/sa3.jpeg) ![](Images/sa4.jpeg)
 
 Year: 2020 - 2021
 
