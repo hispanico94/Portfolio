@@ -56,7 +56,7 @@ The app fetches the data from the [OpenAQ public APIs](https://docs.openaq.org) 
 
 This project is available on the [Air Monitor repo](https://github.com/hispanico94/Air-Monitor).
 
-## SimplyAuth
+## SimplyAuth (WIP)
 
 ![](Images/sa1.jpeg) ![](Images/sa2.jpeg) ![](Images/sa3.jpeg) ![](Images/sa4.jpeg)
 
@@ -74,4 +74,4 @@ Users can reorder OTPs on the home view, they can also edit or delete OTPs by lo
 
 Like Air Monitor, the architecture used for SimplyAuth is [The Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture) by Brandon Williams and Stephen Celis at [Point-Free](https://www.pointfree.co). This is the only third party dependency used in the project and it's added via Swift Package Manager.
 
-This project is available on the [SimplyAuth repo](https://github.com/hispanico94/SimplyAuth).
+I'm still working on this project, but if you want to check out the source code it's available on the [SimplyAuth repo](https://github.com/hispanico94/SimplyAuth).
