@@ -6,7 +6,7 @@
 
 # Current Position
 
-iOS Developer @ [Metide Srl](https://www.metide.com)
+iOS Developer @ [Prima Assicurazioni S.p.A.](https://www.prima.it/)
 
 # Personal Projects
 
